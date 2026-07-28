@@ -21,3 +21,33 @@ const promiseOne = new Promise((resolve, reject) => {
 promiseOne.then((result) => {
     console.log(result);
 });
+//Asynch/Await
+async function test(){
+    console.log("1");
+
+}
+test();
+console.log()
+
+const login = new Promise((resolve, reject) => {
+    let username = "Pari";
+    let password = "12345";
+
+    let enteredUsername = "Pari";
+    let enteredPassword = "12345";
+
+    if (enteredUsername === username && enteredPassword === password) {
+        resolve("Username and Password are correct!");
+    } else {
+        reject("ERROR: Invalid Username or Password!");
+    }
+});
+
+login
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+   
