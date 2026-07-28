@@ -1,2 +1,23 @@
 //promises for asynchronous
 //js single threaded programming language
+
+let msg = true;
+
+const promiseOne = new Promise((resolve, reject) => {
+
+    if (!msg == true) {
+        console.log("message using promises failed");
+        reject("Error");
+    } else {
+        console.log("error.........");
+
+        setTimeout(() => {
+            resolve("Promise resolved successfully");
+        }, 2000);
+    }
+
+});
+
+promiseOne.then((result) => {
+    console.log(result);
+});
