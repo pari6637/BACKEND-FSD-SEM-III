@@ -51,3 +51,19 @@ login
         console.log(error);
     });
    
+async function test() {
+    console.log("message1");
+    const response=await fetch("./student.json");
+    console.log(response.status);
+    const stdn=await response.json();
+    return stdn;
+    console.log("Message 3");
+    
+}
+
+test().then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+
+})
+console.log("message4");
