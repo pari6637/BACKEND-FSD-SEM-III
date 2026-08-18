@@ -11,3 +11,4 @@ events.on("exit",(name)=>{
 })
 events.emit("greet","pari");
 events.emit("exit");
+
