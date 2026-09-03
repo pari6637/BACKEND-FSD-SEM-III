@@ -13,7 +13,7 @@ const server=http.createServer((req,res)=>{
         res.end("<h1> Welcome to Contact Page");
     }
     else{
-        
+        res.writeHead(404,{"Content-Type":"text/html"});
     }
 
 })
