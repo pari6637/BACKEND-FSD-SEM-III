@@ -11,10 +11,10 @@ body {
     color: #333;
 }
 
-/* Header */
+
 
 header {
-    background-color: #222;
+    background-color: darkcyan;
     color: white;
     padding: 20px;
     text-align: center;
@@ -34,7 +34,7 @@ nav a:hover {
     color: blue;
 }
 
-/* Sections */
+
 
 section {
     padding: 50px;
@@ -47,7 +47,7 @@ section {
 }
 
 h2 {
-    color: cyan;
+    color: cadetblue;
     margin-bottom: 20px;
 }
 
@@ -59,7 +59,7 @@ p {
 
 
 button {
-    background-color: pink;
+    background-color: orange;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -72,7 +72,7 @@ button:hover {
     background-color: blue;
 }
 
-/* Skills */
+
 
 ul {
     list-style: none;
@@ -86,7 +86,6 @@ li {
     border-radius: 5px;
 }
 
-/* Projects */
 
 .project {
     background-color: white;
@@ -96,16 +95,16 @@ li {
     border-radius: 8px;
 }
 
-/* Footer */
+
 
 footer {
-    background-color: #222;
+    background-color: darkcyan;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
-/* Responsive */
+
 
 @media (max-width: 600px) {
 
