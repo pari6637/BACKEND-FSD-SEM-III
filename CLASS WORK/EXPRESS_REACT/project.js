@@ -21,6 +21,10 @@ app.post('/products',(req,res)=>{
         name:req.body.name,
         price:req.body.price,
     }
+    products.push(newProduct);
+    fs.writeFile("products.json",JSON.stringify(products),()=>{
+        
+    })
 
 })
 
