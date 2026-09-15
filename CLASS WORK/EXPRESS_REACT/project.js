@@ -13,7 +13,16 @@ app.get('/products',(req,res)=>{
     res.json(products);
 
 });
-app.post('/products',)
+app.post('/products',(req,res)=>{
+    const data=fs.readFile("products,json","utf-8");
+    const products=json.parse(data);
+    const newProduct={
+        id:products.length+1,
+        name:req.body.name,
+        price:req.body.price,
+    }
+
+})
 
 app.listen(4000,()=>{
 
