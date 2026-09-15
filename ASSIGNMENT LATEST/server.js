@@ -2,9 +2,9 @@
 const http = require('http');
 const fs = require('fs');
 
-const PORT = 3000;
+const PORT = 3001;
 
-// HTML form
+
 const formHTML = `
 <!DOCTYPE html>
 <html>
@@ -42,19 +42,21 @@ const formHTML = `
 </html>
 `;
 
-// Create HTTP server
+
 const server = http.createServer((req, res) => {
 
-    
+    // Home route
     if (req.url === '/' && req.method === 'GET') {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(formHTML);
     }
 
+   
     else if (req.url === '/add' && req.method === 'POST') {
 
         let body = '';
 
+        
         req.on('data', chunk => {
             body += chunk.toString();
         });
@@ -70,7 +72,7 @@ const server = http.createServer((req, res) => {
                 email: params.get('email')
             };
 
-            // Read existing records
+            
             fs.readFile('students.json', 'utf8', (err, data) => {
 
                 let students = [];
@@ -79,10 +81,10 @@ const server = http.createServer((req, res) => {
                     students = JSON.parse(data);
                 }
 
-                // Add new student
+               
                 students.push(student);
 
-                // Save data
+               
                 fs.writeFile(
                     'students.json',
                     JSON.stringify(students, null, 2),
@@ -94,7 +96,7 @@ const server = http.createServer((req, res) => {
                             return;
                         }
 
-                        // Redirect to student records
+                        
                         res.writeHead(302, {
                             Location: '/students'
                         });
@@ -106,7 +108,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
-   
+    
     else if (req.url === '/students' && req.method === 'GET') {
 
         fs.readFile('students.json', 'utf8', (err, data) => {
@@ -163,6 +165,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
+    
     else {
         res.writeHead(404, {
             'Content-Type': 'text/plain'
