@@ -31,7 +31,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #00bcd4;
+    color: blue;
 }
 
 /* Sections */
@@ -42,12 +42,12 @@ section {
 }
 
 #home {
-    background-color: #dff6ff;
+    background-color: pink;
     min-height: 300px;
 }
 
 h2 {
-    color: #0077b6;
+    color: cyan;
     margin-bottom: 20px;
 }
 
@@ -56,10 +56,10 @@ p {
     line-height: 1.6;
 }
 
-/* Button */
+
 
 button {
-    background-color: #0077b6;
+    background-color: pink;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -69,7 +69,7 @@ button {
 }
 
 button:hover {
-    background-color: #023e8a;
+    background-color: blue;
 }
 
 /* Skills */
